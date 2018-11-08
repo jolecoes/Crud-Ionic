@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title color='danger'>
+        CRUD
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let articulo of articulos" (click)="goToDetail(articulo.ref)">
+      {{ articulo.nomp }}
+    </button>
+  </ion-list>  
+  <div padding>
+    <button ion-button block (click)="createArticulo()">Nuevo Artículo</button>
+  </div>
+  
+</ion-content>
